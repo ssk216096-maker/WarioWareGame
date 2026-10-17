@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://b67gh3q1h0bof"]
+
+[ext_resource type="Script" uid="uid://bk3hq0rabmrcu" path="res://scencs/titlescreen.gd" id="1_80dml"]
+[ext_resource type="Texture2D" uid="uid://dn0png510up4r" path="res://images.jpeg" id="1_u4k5p"]
+
+[node name="Titlescreen" type="Node2D" unique_id=2145937843]
+script = ExtResource("1_80dml")
+
+[node name="background" type="TextureRect" parent="." unique_id=855945188]
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1152.0
+offset_bottom = 653.0
+texture = ExtResource("1_u4k5p")
+
+[node name="title" type="RichTextLabel" parent="background" unique_id=454919047]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 84.0
+offset_right = 894.0
+offset_bottom = 326.0
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/normal_font_size = 108
+text = " warioware"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="background" unique_id=612231876]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 238.0
+offset_right = 707.0
+offset_bottom = 467.0
+
+[node name="start" type="Button" parent="background/VBoxContainer" unique_id=355024361]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_constants/icon_max_width = 0
+theme_override_font_sizes/font_size = 26
+text = " start game"
+
+[node name="settings" type="Button" parent="background/VBoxContainer" unique_id=865943818]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_constants/icon_max_width = 0
+theme_override_font_sizes/font_size = 26
+text = " settings"
+
+[node name="quit" type="Button" parent="background/VBoxContainer" unique_id=90722434]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_constants/icon_max_width = 0
+theme_override_font_sizes/font_size = 26
+text = "Quit "
+
+[connection signal="pressed" from="background/VBoxContainer/start" to="." method="_on_start_pressed"]
